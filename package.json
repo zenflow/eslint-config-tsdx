@@ -1,0 +1,56 @@
+{
+  "name": "eslint-config-tsdx",
+  "version": "0.1.0",
+  "description": "An ESLint shareable config with rules of tsdx",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "prettier",
+    "react",
+    "tsdx",
+    "typescript"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "eslintConfig": {
+    "extends": ["./index.js"]
+  },
+  "scripts": {
+    "eslint-check": "eslint --print-config index.js | eslint-config-prettier-check",
+    "fix": "eslint --fix .",
+    "lint": "eslint .",
+    "test": "npm run eslint-check && npm run lint",
+    "prepack": "npm run test"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "eslint-config-prettier": "6.x",
+    "eslint-config-react-app": "5.x",
+    "eslint-plugin-flowtype": "3.x || 4.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-prettier": "3.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "1.x || 2.x",
+    "prettier": "2.x"
+  },
+  "peerDependencies": {
+    "eslint": ">= 6"
+  },
+  "devDependencies": {
+    "eslint": "6.x"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/eslint-config-tsdx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zenflow/eslint-config-tsdx/issues"
+  },
+  "homepage": "https://github.com/zenflow/eslint-config-tsdx#readme"
+}
