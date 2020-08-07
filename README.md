@@ -5,17 +5,33 @@ with rules of [tsdx](https://github.com/formium/tsdx).
 
 ### Installing
 
+#### Install Dependencies
+
+This package requires `eslint@6.x`.
+
+Install it if you haven't already:
+
+```
+npm install --save-dev eslint@6.x
+```  
+
+Install this package:
+
 ```
 npm install --save-dev eslint-config-tsdx
 ```
 
-If you intend to lint TypeScript, you will also need to have the `typescript` package installed. 
+This package requires you to have `typescript` installed when (and only when) linting any TypeScript (ts or tsx) files.
+
+Install `typescript` if necessary:
 
 ```
 npm install --save-dev typescript
 ```
 
-Then add `"tsdx"` to the `"extends"` of your `.eslintrc` file.
+#### Configure `.eslintrc`
+
+Add `"tsdx"` to the `"extends"` of your `.eslintrc` file.
 
 If you are using React, set `config.settings.react.version` in your `.eslintrc` file.
 Otherwise, the latest version of React is assumed.
@@ -61,3 +77,9 @@ we will include them as "dependencies" *and issue the following warning*:
 "eslint-plugin-react-hooks": "1.x || 2.x"
 "prettier": "2.x"
 ```
+
+
+## TODO for Matt
+
+PR tsdx: Org should take over eslint-config-tsdx & use it in tsdx 
+    https://github.com/formium/tsdx/blob/master/src/createEslintConfig.ts
