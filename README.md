@@ -1,6 +1,39 @@
 # eslint-config-tsdx
 
-An ESLint shareable config with rules of [tsdx](https://github.com/formium/tsdx).
+An [ESLint shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html)
+with rules of [tsdx](https://github.com/formium/tsdx).
+
+### Installing
+
+```
+npm install --save-dev eslint-config-tsdx
+```
+
+If you intend to lint TypeScript, you will also need to have the `typescript` package installed. 
+
+```
+npm install --save-dev typescript
+```
+
+Then add `"tsdx"` to the `"extends"` of your `.eslintrc` file.
+
+If you are using React, set `config.settings.react.version` in your `.eslintrc` file.
+Otherwise, the latest version of React is assumed.
+
+Example `.eslintrc` file:
+
+```json
+{
+  "extends": [
+    "tsdx"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"  
+    }
+  }
+}
+```
 
 ### Warning
 
