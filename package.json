@@ -15,7 +15,9 @@
     "index.js"
   ],
   "eslintConfig": {
-    "extends": ["./index.js"]
+    "extends": [
+      "./index.js"
+    ]
   },
   "scripts": {
     "eslint-check": "eslint --print-config index.js | eslint-config-prettier-check",
@@ -39,7 +41,7 @@
     "prettier": "2.x"
   },
   "peerDependencies": {
-    "eslint": ">= 6"
+    "eslint": "6.x"
   },
   "devDependencies": {
     "eslint": "6.x"
